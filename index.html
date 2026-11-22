@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0a0e0c">
+<meta name="theme-color" content="#111814">
 <title>Selim Coşkun — Embedded & PCB Engineer</title>
 <meta name="description" content="Selim Coşkun — STM32 firmware, KiCad PCB design and UAV flight-control engineering.">
 <meta property="og:title" content="Selim Coşkun — Embedded & PCB Engineer">
@@ -14,8 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0e0c;--bg2:#0d1210;--surface:#121815;--surface2:#161e1a;--line:#1f2a24;--line2:#2b3a32;
-  --ink:#e9ede9;--muted:#9aa89f;--dim:#6b7a71;
+  --bg:#111814;--bg2:#141c18;--surface:#18211c;--surface2:#1c2621;--line:#27342d;--line2:#34463c;
+  --ink:#e9ede9;--muted:#9aa89f;--dim:#7d8c83;
   --copper:#e39a4f;--copper2:#f3b878;--green:#5fd4a0;--mask:#1d3d2c;
   --maxw:1160px;--r:16px;
   --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -43,11 +43,11 @@ img{max-width:100%;height:auto;display:block}
 ::selection{background:var(--copper);color:#111}
 
 /* global parallax backdrop */
-.backdrop{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.10;
+.backdrop{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.22;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' fill='none' stroke='%23e39a4f' stroke-width='1.4'%3E%3Cpath d='M0 60h90l30 30h80l25-25h95M0 170h50l25 25h120l35-35h90M40 320v-70l35-35M160 0v40l25 25v55M260 320v-60l-25-25h-55M320 250h-60l-25 25'/%3E%3Cg fill='%23e39a4f' stroke='none'%3E%3Ccircle cx='90' cy='60' r='4'/%3E%3Ccircle cx='200' cy='90' r='4'/%3E%3Ccircle cx='195' cy='195' r='4'/%3E%3Ccircle cx='75' cy='215' r='4'/%3E%3Ccircle cx='185' cy='120' r='4'/%3E%3Ccircle cx='180' cy='235' r='4'/%3E%3C/g%3E%3C/svg%3E");background-size:320px 320px}
 .orb{position:fixed;z-index:0;pointer-events:none;border-radius:50%}
-.orb.a{width:900px;height:900px;background:radial-gradient(circle,rgba(120,70,30,.32),transparent 65%);top:-10%;right:-380px}
-.orb.b{width:800px;height:800px;background:radial-gradient(circle,rgba(25,90,60,.32),transparent 65%);bottom:-300px;left:-360px}
+.orb.a{width:900px;height:900px;background:radial-gradient(circle,rgba(140,85,40,.38),transparent 65%);top:-10%;right:-380px}
+.orb.b{width:800px;height:800px;background:radial-gradient(circle,rgba(30,110,72,.36),transparent 65%);bottom:-300px;left:-360px}
 main,footer,.hero{position:relative;z-index:1}
 /* keep decorative layers from widening the page on mobile browsers */
 @supports (overflow:clip){html,body{overflow-x:clip}}
@@ -59,7 +59,7 @@ main,footer,.hero{position:relative;z-index:1}
 /* progress + nav */
 .progress{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--copper),var(--green));z-index:30}
 header.top{position:fixed;inset:0 0 auto 0;z-index:25;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
-header.top.solid{background:rgba(10,14,12,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+header.top.solid{background:rgba(17,24,20,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;letter-spacing:-.01em;text-decoration:none;font-size:17px}
 .brand .mark{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--mask);border:1px solid #2f6b4c;font-family:var(--mono);font-size:12px;color:var(--green)}
@@ -158,7 +158,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.2vw,3.2rem)
 .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
 .thumbs .frame{border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
 .thumbs .frame img{width:100%;padding:10px 12px 14px}
-.tagbox{font-family:var(--mono);font-size:11.5px;background:rgba(10,14,12,.85);border:1px solid var(--line2);border-radius:10px;padding:10px 12px;color:var(--muted);line-height:1.5}
+.tagbox{font-family:var(--mono);font-size:11.5px;background:rgba(17,24,20,.85);border:1px solid var(--line2);border-radius:10px;padding:10px 12px;color:var(--muted);line-height:1.5}
 .tagbox b{color:var(--ink);font-weight:500}
 
 /* diagrams */
@@ -228,13 +228,14 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.2vw,3.2rem)
 
 /* contact band */
 .cta-band{position:relative;overflow:hidden;min-height:86vh;display:flex;align-items:center;border-top:1px solid var(--line)}
-.cta-band .bg{position:absolute;left:-5%;right:-5%;top:-30%;height:160%;z-index:0;opacity:.5}
+.cta-band .bg{position:absolute;left:-5%;right:-5%;top:-30%;height:160%;z-index:0;opacity:.95}
 .cta-band .bg img{width:100%;height:100%;object-fit:cover}
-.cta-band::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(70% 70% at 50% 50%,rgba(10,14,12,.55),rgba(10,14,12,.96))}
+.cta-band::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(60% 55% at 50% 50%,rgba(17,24,20,.72),rgba(17,24,20,.45) 70%,rgba(17,24,20,.8))}
 .cta-band .wrap{z-index:2;text-align:center}
-.cta-band h2{font-size:clamp(2.4rem,6vw,4.6rem);margin:14px auto 18px;max-width:14em}
-.cta-band p{color:var(--muted);max-width:36em;margin:0 auto 32px;font-size:1.08rem}
+.cta-band h2{font-size:clamp(2.4rem,6vw,4.6rem);margin:14px auto 18px;max-width:14em;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.cta-band p{color:#c9d3cc;max-width:36em;margin:0 auto 32px;font-size:1.08rem;text-shadow:0 1px 12px rgba(0,0,0,.7)}
 .cta-band .btns{justify-content:center}
+.cta-band .kicker{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(17,24,20,.82);border:1px solid var(--line2)}
 
 footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--dim);font-size:.9rem;background:var(--bg)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
@@ -276,7 +277,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <!-- ================= HERO ================= -->
 <section class="hero" aria-label="Introduction">
-  <div class="layer h-traces backdrop" data-speed="0.15" style="position:absolute;opacity:.3" aria-hidden="true"></div>
+  <div class="layer h-traces backdrop" data-speed="0.15" style="position:absolute;opacity:.45" aria-hidden="true"></div>
   <div class="layer h-glow" data-speed="0.3" aria-hidden="true"></div>
   <div class="layer h-board" data-speed="0.42">
     <img src="assets/pcb-iso.png" alt="3D render of the AFSUAM Master H7 four-layer STM32H743 controller board" width="1600" height="1000" fetchpriority="high">
